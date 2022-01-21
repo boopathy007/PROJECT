@@ -32,6 +32,7 @@ def admin():
         if ad_op == 1:
             os.system('cls')
             print("    Merchent Review Menu     ")
+            
             print("-----------------------------")
             
             try:
