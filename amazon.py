@@ -14,26 +14,9 @@ catagory = {'mobiles','fashion','electronics'}
 customer = [{'name':'boopathy','password':1234,'id':'c101','wallet':1000000},
             {'name':'harish','password':1234,'id':'c102','wallet':10000000}]
 
-vendor = [{'username':'vignesh','password':1234,'status':'approved','id':'m110'},
-          {'username':'vetri','password':1234,'status':'approved','id':'m111'},
-          {'username':'mani','password':1234,'status':'approved','id':'m112'},
-          {'username':'tamil','password':1234,'status':'approved','id':'m113'},
-          {'username':'kathir','password':1234,'status':'approved','id':'m114'}
-          ]
+vendor = []
 
-product = [{'id':'m110','catagory':'mobiles','name':'iqoo','spec':['ROM: 128GB','RAM: 4GB','COLOUR : BLUE','SIM : Dual SIM'],'price':27000,'quantity':5},
-           {'id':'m110','catagory':'fashion','name':'shoe','spec':['Colour: black','size: 7 - 9','Material Type: Synthetic','Heal Type: Flat'],'price':700,'quantity':20},
-           {'id':'m110','catagory':'electronics','name':'airpods','spec':['Ear placement : In Ear','Colour : Black','Weigth : 50grm'],'price':2500,'quantity':20},
-           {'id':'m111','catagory':'mobiles','name':'redmi','spec':['ROM: 64GB','RAM: 8GB','COLOUR : BLACK','SIM : Dual SIM'],'price':19000,'quantity':5},
-           {'id':'m111','catagory':'fashion','name':'shampoo','spec':['Liquid Volume : 800ml','Product Benefits : Anti hair loss,Anti-drandruff'],'price':450,'quantity':10},
-           {'id':'m111','catagory':'electronics','name':'laptop','spec':['CPU : AMD processor','OS : windows 11','Colour : Silver'],'price':42000,'quantity':10},
-           {'id':'m112','catagory':'mobiles','name':'samsung','spec':['ROM: 128GB','RAM: 4GB','COLOUR : BLUE','SIM : Dual SIM'],'price':12000,'quantity':5},
-           {'id':'m112','catagory':'fashion','name':'puma','spec':['Fabric composition : 60% cotton','Relaxe Fit'],'price':1500,'quantity':10},
-           {'id':'m113','catagory':'electronics','name':'printer','spec':['Connector : App,wifi,USB','Sheet size : A4,B5,A6,DL'],'price':15000,'quantity':10},
-           {'id':'m113','catagory':'mobiles','name':'apple','spec':['ROM: 128GB','RAM: 4GB','COLOUR : BLUE','SIM : Dual SIM'],'price':1500000,'quantity':5},
-           {'id':'m113','catagory':'electronics','name':'camara','spec':['Connectivity Type : Wireless','Room Type : Offie,Garage,Kitchen'],'price':3000,'quantity':20},
-           {'id':'m114','catagory':'fashion','name':'trimmer','spec':['Colour : Silver','Material : Metal','Size : 1mm - 5mm'],'price':2000,'quantity':10}
-           ]
+product = []
 
 order = []
 
@@ -352,6 +335,7 @@ def mer_rem_pro(i):
                 input(("Wrong Input!!press entr to continue"))
         else:
             input("No produt avilable!! Add new produts\nPress 'ENTER' to continue")
+            break
 
 def mer_statics(i,product):
     os.system('cls')
@@ -817,17 +801,18 @@ def customer_login():
 
 
 
-
-
-
-
-
 while True:
     os.system('cls')
 
     op = int(input("\tAMAZON\n1.Admin\n2.Merchent\n3.Customer\n4.Exit\nEnter your choise:"))
     if op == 1:
-        admin()
+        os.system('cls')
+        ad_id = input("Enter id :")
+        ad_pas = int(input("Enter password : "))
+        if ad_id == 'admin' and ad_pas == 123:
+            admin()
+        elif ad_id != 'admin' or ad_pas != 123:
+            input("Wrong user name")
     elif op == 2:
         merchent(product)
     elif op == 3:
