@@ -1,5 +1,4 @@
-# PROJECT
-PROGRAMMIN PROJECTS
+
 ADMIN DETAILS
 --------------
 user name : admin
