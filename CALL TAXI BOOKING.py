@@ -42,7 +42,7 @@ while True:
                                     book_tax=free_taxi[0]
                                     dist = int(abs(ord(free_taxi[0].current_pos)-ord(pickup.upper())))
                                     for i in free_taxi:
-                                        if earn <= i.earning and int(abs(ord(i.current_pos)-ord(pickup.upper()))) <= dist :
+                                        if earn >= i.earning and int(abs(ord(i.current_pos)-ord(pickup.upper()))) <= dist :
                                             dist =  int(abs(ord(i.current_pos)-ord(pickup.upper())))
                                             book_tax = i
                                             earn  = i.earning
