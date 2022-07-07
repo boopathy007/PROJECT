@@ -107,7 +107,7 @@ def customer(user,trans_no):
                         input("    Press 'ENTER' to continue      ")
                 else:
                     os.system("cls")
-                    print("               STATE BANK OF INDIA                 ")
+                     print("               STATE BANK OF INDIA                 ")
                     print("---------------------------------------------------")
                     print("\n")
                     print("    Account balance is low.You cant't withdraw!    ")
